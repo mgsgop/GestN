@@ -68,7 +68,7 @@
 				"panel" : 
 				{
 					"isOpen" : "true",
-					"pathVisible" : false,
+					"pathVisible" : true,
 					"position" : 
 					{
 						"X" : 401,
@@ -81,7 +81,7 @@
 		{
 			"scriptMode" : "manual",
 			"workspaceLeft" : 0,
-			"workspaceTop" : 100
+			"workspaceTop" : 0
 		}
 	},
 	"dataClasses" : 
@@ -205,12 +205,11 @@
 					"simpleDate" : false
 				},
 				{
-					"name" : "Releve",
-					"kind" : "relatedEntities",
+					"name" : "INE",
+					"kind" : "relatedEntity",
 					"scope" : "public",
-					"type" : "INEXCollection",
-					"reversePath" : true,
-					"path" : "etudiant"
+					"type" : "INEX",
+					"path" : "INEX"
 				}
 			],
 			"key" : 
@@ -252,11 +251,12 @@
 					"path" : "iNEX"
 				},
 				{
-					"name" : "etudiant",
-					"kind" : "relatedEntity",
+					"name" : "etudiantCollection",
+					"kind" : "relatedEntities",
 					"scope" : "public",
-					"type" : "Etudiant",
-					"path" : "Etudiant"
+					"type" : "EtudiantCollection",
+					"reversePath" : true,
+					"path" : "INE"
 				}
 			],
 			"key" : 

@@ -3,12 +3,25 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#matrix1 {
-	 z-index: 19;
-	 width: 500px;
-	 height: 500px;
-	 top: 205px;
-	 left: 492px;
+#label1 {
+	 z-index: 22;
+	 width: 57px;
+	 height: 20px;
+	 top: 73px;
+	 left: 568px;
+	
+	 position: absolute;
+	 font-size: 18px;
+	 color: rgb(255, 255, 255);
+	 
+}
+
+#combobox1 {
+	 z-index: 22;
+	 width: 164px;
+	 height: 24px;
+	 top: 71px;
+	 left: 630px;
 	
 	 position: absolute;
 	 
@@ -20,17 +33,6 @@
 	 height: 323px;
 	 top: 3px;
 	 left: 55px;
-	
-	 position: absolute;
-	 
-}
-
-#dataGrid5 {
-	 z-index: 10;
-	 width: 425px;
-	 height: 157px;
-	 top: 2px;
-	 left: 538px;
 	
 	 position: absolute;
 	 
