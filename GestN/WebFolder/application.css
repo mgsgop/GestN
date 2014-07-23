@@ -3,3 +3,21 @@
 	The CSS styles that are created when you create a Widget Role are placed in this file too.
 */
 
+
+.waf-widget.waf-button.waf-state-disable {
+	background-color: #e5e5e5 !important;
+}
+.waf-widget.waf-button..waf-state-focus {
+	background-color: #0000bf !important;
+}
+.waf-widget.waf-button..waf-state-active {
+	background-color: #0000bf !important;
+}
+.waf-widget.waf-button..waf-state-hover {
+	background-color: #0000bf !important;
+}
+
+
+.waf-widget.waf-button.selectedButton {
+	background-color: #0000bf !important;
+}
