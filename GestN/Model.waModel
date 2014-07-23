@@ -15,8 +15,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 67,
-						"Y" : 255
+						"X" : 65,
+						"Y" : 206
 					}
 				}
 			},
@@ -29,8 +29,8 @@
 					"pathVisible" : false,
 					"position" : 
 					{
-						"X" : 415,
-						"Y" : 25
+						"X" : 309,
+						"Y" : 5
 					}
 				}
 			},
@@ -57,8 +57,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 547,
-						"Y" : 266
+						"X" : 752,
+						"Y" : 302
 					}
 				}
 			},
@@ -68,11 +68,11 @@
 				"panel" : 
 				{
 					"isOpen" : "true",
-					"pathVisible" : true,
+					"pathVisible" : false,
 					"position" : 
 					{
-						"X" : 80,
-						"Y" : 32
+						"X" : 401,
+						"Y" : 284
 					}
 				}
 			}
@@ -81,7 +81,7 @@
 		{
 			"scriptMode" : "manual",
 			"workspaceLeft" : 0,
-			"workspaceTop" : 0
+			"workspaceTop" : 100
 		}
 	},
 	"dataClasses" : 

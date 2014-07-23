@@ -5,7 +5,7 @@
 		<meta name="generator" content="Wakanda GUIDesigner"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 		<meta name="WAF.packageJson"/>
-		<meta name="WAF.catalog" content="Element,Module,INEX"/>
+		<meta name="WAF.catalog" content="Element,Module,INEX,Etudiant"/>
 		<meta name="wakanda-version" content="8 build 8.160602"/>
 		<meta name="wakanda-build" content="8.160602"/>
 		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
@@ -14,6 +14,7 @@
 		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 
 		
+		<meta data-type="dataSource" data-lib="WAF" data-source="Etudiant" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="etudiant" content="etudiant"/>
 		<meta data-type="dataSource" data-lib="WAF" data-source="INEX" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="iNEX" content="iNEX"/><meta data-type="dataSource" data-lib="WAF" data-source="Module" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="module" content="module"/>
 		
 		<meta data-type="dataSource" data-lib="WAF" data-source="module.Elements" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="Elements" content="Elements"/><meta data-type="dataSource" data-lib="WAF" data-source="Element" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="element" content="element"/></head>
@@ -22,9 +23,10 @@
 	 	<div id="richText1" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText"></div>
  		<div id="richText2" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText">Copyrights</div>
  	</div>
-		<div id="dataGrid3" data-type="dataGrid" data-lib="WAF" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'Nom','colID':'Nom','width':'150','title':'Nom%20Module'}]" data-constraint-left="true" data-constraint-top="true" data-binding="module"></div>
-		<div id="dataGrid4" data-type="dataGrid" data-lib="WAF" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'Nom','colID':'Nom','width':'150','title':'Nom%20Element'},{'sourceAttID':'Note','colID':'Note','width':'90','title':'Note%20Element'},{'sourceAttID':'Mention','colID':'Mention','width':'150','title':'Mention'},{'sourceAttID':'Valide','colID':'Valide','width':'150','title':'Valide'}]" data-constraint-left="true" data-constraint-top="true" data-binding="Elements"></div>
+		<div id="dataGrid3" data-type="dataGrid" data-lib="WAF" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'ID','colID':'ID','width':'70','title':'ID'},{'sourceAttID':'NiveauEtudes','colID':'NiveauEtudes','width':'150','title':'NiveauEtudes'}]" data-constraint-left="true" data-constraint-top="true" data-binding="iNEX.modules"></div>
+		<div id="dataGrid4" data-type="dataGrid" data-lib="WAF" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'Nom','colID':'Nom','width':'102','title':'Nom%20Element'},{'sourceAttID':'Note','colID':'Note','width':'103','title':'Note%20Element'},{'sourceAttID':'Mention','colID':'Mention','width':'81','title':'Mention'},{'sourceAttID':'Valide','colID':'Valide','width':'150','title':'Valide'}]" data-constraint-left="true" data-constraint-top="true" data-binding="module.Elements"></div>
 		<div id="dataGrid5" data-type="dataGrid" data-lib="WAF" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'NiveauEtudes','colID':'NiveauEtudes','title':'Niveau%20'}]" data-constraint-left="true" data-constraint-top="true" data-binding="iNEX"></div>
+		<div id="dataGrid6" data-type="dataGrid" data-lib="WAF" class="waf-widget waf-dataGrid" data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'Nom','colID':'Nom','width':'64','title':'Nom'},{'sourceAttID':'Prenom','colID':'Prenom','width':'77','title':'Prenom'},{'sourceAttID':'Age','colID':'Age','width':'58','title':'Age'},{'sourceAttID':'AnneeIntegration','colID':'AnneeIntegration','width':'90','title':'Integration'},{'sourceAttID':'NiveauINE','colID':'NiveauINE','width':'106','title':'Niveau%20Actuel'}]" data-constraint-left="true" data-constraint-top="true" data-binding="etudiant"></div>
 		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
 	</body>
 </html>
