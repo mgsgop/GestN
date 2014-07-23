@@ -5,10 +5,10 @@
 
 #label1 {
 	 z-index: 22;
-	 width: 57px;
+	 width: 120px;
 	 height: 20px;
-	 top: 73px;
-	 left: 568px;
+	 top: 25px;
+	 left: 522px;
 	
 	 position: absolute;
 	 font-size: 18px;
@@ -20,8 +20,8 @@
 	 z-index: 22;
 	 width: 164px;
 	 height: 24px;
-	 top: 71px;
-	 left: 630px;
+	 top: 23px;
+	 left: 647px;
 	
 	 position: absolute;
 	 
@@ -31,8 +31,8 @@
 	 z-index: 12;
 	 width: 407px;
 	 height: 323px;
-	 top: 3px;
-	 left: 55px;
+	 top: 16px;
+	 left: 61px;
 	
 	 position: absolute;
 	 
@@ -41,9 +41,9 @@
 #dataGrid4 {
 	 z-index: 6;
 	 width: 422px;
-	 height: 168px;
-	 top: 135px;
-	 left: 484px;
+	 height: 201px;
+	 top: 116px;
+	 left: 512px;
 	
 	 position: absolute;
 	 
@@ -78,8 +78,8 @@
 	 z-index: 4;
 	 width: 466px;
 	 height: 127px;
-	 top: 358px;
-	 left: 32px;
+	 top: 359px;
+	 left: 24px;
 	
 	 position: absolute;
 	 background-color: rgb(51, 51, 51);
