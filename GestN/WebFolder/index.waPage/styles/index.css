@@ -3,6 +3,17 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#matrix1 {
+	 z-index: 19;
+	 width: 500px;
+	 height: 500px;
+	 top: 205px;
+	 left: 492px;
+	
+	 position: absolute;
+	 
+}
+
 #dataGrid6 {
 	 z-index: 12;
 	 width: 407px;
