@@ -3,113 +3,95 @@
 	"extraProperties": {
 		"version": "2",
 		"classes": {
-			"Etudiant": {
-				"panelColor": "#B8CCE4",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 23,
-						"Y": 155
-					}
-				}
-			},
 			"INE1": {
 				"panelColor": "#D7E3BC",
 				"panel": {
 					"isOpen": "true",
+					"pathVisible": false,
 					"position": {
-						"X": 339,
-						"Y": 68
+						"X": 502,
+						"Y": 36
 					}
 				}
 			},
 			"INE2": {
-				"panelColor": "#548DD4",
+				"panelColor": "#CCC1D9",
 				"panel": {
+					"pathVisible": false,
 					"isOpen": "true",
 					"position": {
-						"X": 224,
-						"Y": 20
+						"X": 513,
+						"Y": 238
 					}
 				}
 			},
 			"INE3": {
-				"panelColor": "#B7DDE8",
+				"panelColor": "#B8CCE4",
 				"panel": {
+					"pathVisible": false,
 					"isOpen": "true",
 					"position": {
-						"X": 224,
-						"Y": 20
+						"X": 519,
+						"Y": 455
 					}
 				}
 			},
 			"Module": {
-				"panelColor": "#B2A2C7",
+				"panelColor": "#fff",
 				"panel": {
+					"pathVisible": false,
 					"isOpen": "true",
 					"position": {
-						"X": 224,
-						"Y": 20
+						"X": 834,
+						"Y": 213
 					}
 				}
 			},
 			"Element": {
-				"panelColor": "#8DB3E2",
+				"panelColor": "#CCC1D9",
+				"panel": {
+					"pathVisible": false,
+					"isOpen": "true",
+					"position": {
+						"X": 1074,
+						"Y": 273
+					}
+				}
+			},
+			"Etudiant": {
+				"panelColor": "#BFBFBF",
 				"panel": {
 					"isOpen": "true",
 					"position": {
-						"X": 224,
-						"Y": 20
-					}
-				}
-			},
-			"DataClass1": {
-				"panel": {
-					"position": {
-						"X": 341,
-						"Y": 222
-					}
-				}
-			},
-			"DataClass2": {
-				"panel": {
-					"position": {
-						"X": 349,
-						"Y": 367
-					}
-				}
-			},
-			"DataClass3": {
-				"panel": {
-					"position": {
-						"X": 701,
-						"Y": 220
+						"X": 225,
+						"Y": 187
 					},
-					"pathVisible": true
+					"pathVisible": false
 				}
 			},
-			"DataClass4": {
+			"Annee": {
+				"panelColor": "#B7DDE8",
 				"panel": {
+					"isOpen": "true",
 					"position": {
-						"X": 1005,
-						"Y": 218
+						"X": 12,
+						"Y": 274
 					},
-					"pathVisible": true
+					"pathVisible": false
 				}
 			}
 		},
 		"model": {
 			"scriptMode": "manual",
 			"workspaceLeft": 0,
-			"workspaceTop": 0
+			"workspaceTop": 131
 		}
 	},
 	"dataClasses": [
 		{
-			"name": "Etudiant",
-			"className": "Etudiant",
-			"collectionName": "EtudiantCollection",
+			"name": "Element",
+			"className": "Element",
+			"collectionName": "ElementCollection",
 			"scope": "public",
 			"attributes": [
 				{
@@ -119,37 +101,27 @@
 					"unique": true,
 					"autosequence": true,
 					"type": "long",
+					"indexKind": "btree",
 					"primKey": true
 				},
 				{
-					"name": "Nom",
+					"name": "NomElement",
 					"kind": "storage",
 					"scope": "public",
 					"type": "string"
 				},
 				{
-					"name": "Prenom",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "Age",
+					"name": "NoteElement",
 					"kind": "storage",
 					"scope": "public",
 					"type": "number"
 				},
 				{
-					"name": "AnneeIntegration",
-					"kind": "storage",
+					"name": "module",
+					"kind": "relatedEntity",
 					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "NiveauCourant",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"type": "Module",
+					"path": "Module"
 				}
 			]
 		},
@@ -166,67 +138,157 @@
 					"unique": true,
 					"autosequence": true,
 					"type": "long",
+					"indexKind": "btree",
 					"primKey": true
+				},
+				{
+					"name": "modules",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "ModuleCollection",
+					"reversePath": true,
+					"path": "iNE1"
+				},
+				{
+					"name": "etudiantCollection",
+					"scope": "public",
+					"reversePath": true,
+					"path": "INE1",
+					"type": "EtudiantCollection",
+					"kind": "relatedEntities"
 				}
 			]
 		},
 		{
-			"collectionName": "DataClass1Collection",
-			"className": "DataClass1",
+			"name": "INE2",
+			"className": "INE2",
+			"collectionName": "INE2Collection",
+			"scope": "public",
 			"attributes": [
 				{
 					"name": "ID",
 					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
 					"type": "long",
-					"autosequence": "true",
-					"unique": "true",
-					"primKey": "true"
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "modules",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "ModuleCollection",
+					"reversePath": true,
+					"path": "iNE2"
+				},
+				{
+					"name": "etudiantCollection",
+					"scope": "public",
+					"reversePath": true,
+					"path": "INE2",
+					"type": "EtudiantCollection",
+					"kind": "relatedEntities"
 				}
 			]
 		},
 		{
-			"collectionName": "DataClass2Collection",
-			"className": "DataClass2",
+			"name": "INE3",
+			"className": "INE3",
+			"collectionName": "INE3Collection",
+			"scope": "public",
 			"attributes": [
 				{
 					"name": "ID",
 					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
 					"type": "long",
-					"autosequence": "true",
-					"unique": "true",
-					"primKey": "true"
+					"indexKind": "btree",
+					"primKey": true
+				},
+				{
+					"name": "modules",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "ModuleCollection",
+					"reversePath": true,
+					"path": "iNE3"
+				},
+				{
+					"name": "etudiantCollection",
+					"scope": "public",
+					"reversePath": true,
+					"path": "INE3",
+					"type": "EtudiantCollection",
+					"kind": "relatedEntities"
 				}
 			]
 		},
 		{
-			"collectionName": "DataClass3Collection",
-			"className": "DataClass3",
+			"name": "Module",
+			"className": "Module",
+			"collectionName": "ModuleCollection",
+			"scope": "public",
 			"attributes": [
 				{
 					"name": "ID",
 					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
 					"type": "long",
-					"autosequence": "true",
-					"unique": "true",
-					"primKey": "true"
+					"indexKind": "btree",
+					"primKey": true
 				},
 				{
 					"name": "NomModule",
+					"kind": "storage",
 					"scope": "public",
-					"type": "string",
-					"kind": "storage"
+					"type": "string"
 				},
 				{
 					"name": "NoteModule",
+					"kind": "storage",
 					"scope": "public",
-					"type": "number",
-					"kind": "storage"
+					"type": "number"
+				},
+				{
+					"name": "iNE1",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "INE1",
+					"path": "INE1"
+				},
+				{
+					"name": "iNE2",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "INE2",
+					"path": "INE2"
+				},
+				{
+					"name": "iNE3",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "INE3",
+					"path": "INE3"
+				},
+				{
+					"name": "Elements",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "ElementCollection",
+					"reversePath": true,
+					"path": "module"
 				}
 			]
 		},
 		{
-			"collectionName": "DataClass4Collection",
-			"className": "DataClass4",
+			"collectionName": "EtudiantCollection",
+			"className": "Etudiant",
 			"attributes": [
 				{
 					"name": "ID",
@@ -237,18 +299,93 @@
 					"primKey": "true"
 				},
 				{
-					"name": "NomElement",
+					"name": "Nom",
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
-					"name": "NoteElement",
+					"name": "Prenom",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "Age",
 					"scope": "public",
 					"type": "number",
 					"kind": "storage"
+				},
+				{
+					"name": "AnneeIntegration",
+					"scope": "public",
+					"type": "number",
+					"kind": "storage"
+				},
+				{
+					"name": "NiveauCourant",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "INE1",
+					"scope": "public",
+					"path": "INE1",
+					"type": "INE1",
+					"kind": "relatedEntity"
+				},
+				{
+					"name": "INE2",
+					"scope": "public",
+					"path": "INE2",
+					"type": "INE2",
+					"kind": "relatedEntity"
+				},
+				{
+					"name": "INE3",
+					"scope": "public",
+					"path": "INE3",
+					"type": "INE3",
+					"kind": "relatedEntity"
+				},
+				{
+					"name": "annee",
+					"kind": "relatedEntity",
+					"type": "Annee",
+					"path": "Annee",
+					"scope": "public"
+				}
+			]
+		},
+		{
+			"collectionName": "AnneeCollection",
+			"className": "Annee",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "AnneeScolaire",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "Etudiants",
+					"scope": "public",
+					"reversePath": true,
+					"path": "annee",
+					"type": "EtudiantCollection",
+					"kind": "relatedEntities"
 				}
 			]
 		}
-	]
+	],
+	"type": []
 }
