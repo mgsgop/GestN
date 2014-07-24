@@ -15,8 +15,8 @@
 					"pathVisible" : false,
 					"position" : 
 					{
-						"X" : 502,
-						"Y" : 36
+						"X" : 584,
+						"Y" : 44
 					}
 				}
 			},
@@ -29,8 +29,8 @@
 					"isOpen" : "true",
 					"position" : 
 					{
-						"X" : 513,
-						"Y" : 238
+						"X" : 584,
+						"Y" : 234
 					}
 				}
 			},
@@ -43,8 +43,8 @@
 					"isOpen" : "true",
 					"position" : 
 					{
-						"X" : 519,
-						"Y" : 455
+						"X" : 582,
+						"Y" : 459
 					}
 				}
 			},
@@ -85,8 +85,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 225,
-						"Y" : 187
+						"X" : 56,
+						"Y" : 22
 					}
 				}
 			},
@@ -99,8 +99,8 @@
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 25,
-						"Y" : 542
+						"X" : 163,
+						"Y" : 292
 					}
 				}
 			}
@@ -109,7 +109,7 @@
 		{
 			"scriptMode" : "manual",
 			"workspaceLeft" : 0,
-			"workspaceTop" : 200
+			"workspaceTop" : 0
 		}
 	},
 	"dataClasses" : 
@@ -226,12 +226,6 @@
 					"type" : "string"
 				},
 				{
-					"name" : "Age",
-					"kind" : "storage",
-					"scope" : "public",
-					"type" : "number"
-				},
-				{
 					"name" : "AnneeIntegration",
 					"kind" : "storage",
 					"scope" : "public",
@@ -242,27 +236,6 @@
 					"kind" : "storage",
 					"scope" : "public",
 					"type" : "string"
-				},
-				{
-					"name" : "INE1",
-					"kind" : "relatedEntity",
-					"scope" : "public",
-					"type" : "INE1",
-					"path" : "INE1"
-				},
-				{
-					"name" : "INE2",
-					"kind" : "relatedEntity",
-					"scope" : "public",
-					"type" : "INE2",
-					"path" : "INE2"
-				},
-				{
-					"name" : "INE3",
-					"kind" : "relatedEntity",
-					"scope" : "public",
-					"type" : "INE3",
-					"path" : "INE3"
 				},
 				{
 					"name" : "Annees",
@@ -304,14 +277,6 @@
 					"type" : "ModuleCollection",
 					"reversePath" : true,
 					"path" : "iNE1"
-				},
-				{
-					"name" : "etudiantCollection",
-					"kind" : "relatedEntities",
-					"scope" : "public",
-					"type" : "EtudiantCollection",
-					"reversePath" : true,
-					"path" : "INE1"
 				}
 			],
 			"key" : 
@@ -345,14 +310,6 @@
 					"type" : "ModuleCollection",
 					"reversePath" : true,
 					"path" : "iNE2"
-				},
-				{
-					"name" : "etudiantCollection",
-					"kind" : "relatedEntities",
-					"scope" : "public",
-					"type" : "EtudiantCollection",
-					"reversePath" : true,
-					"path" : "INE2"
 				}
 			],
 			"key" : 
@@ -386,14 +343,6 @@
 					"type" : "ModuleCollection",
 					"reversePath" : true,
 					"path" : "iNE3"
-				},
-				{
-					"name" : "etudiantCollection",
-					"kind" : "relatedEntities",
-					"scope" : "public",
-					"type" : "EtudiantCollection",
-					"reversePath" : true,
-					"path" : "INE3"
 				}
 			],
 			"key" : 
