@@ -1,355 +1,473 @@
-﻿{
-	"toJSON": true,
-	"extraProperties": {
-		"version": "2",
-		"classes": {
-			"INE1": {
-				"panelColor": "#D7E3BC",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": false,
-					"position": {
-						"X": 502,
-						"Y": 36
+
+{
+	"toJSON" : true,
+	"extraProperties" : 
+	{
+		"version" : "2",
+		"classes" : 
+		{
+			"INE1" : 
+			{
+				"panelColor" : "#D7E3BC",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : false,
+					"position" : 
+					{
+						"X" : 502,
+						"Y" : 36
 					}
 				}
 			},
-			"INE2": {
-				"panelColor": "#CCC1D9",
-				"panel": {
-					"pathVisible": false,
-					"isOpen": "true",
-					"position": {
-						"X": 513,
-						"Y": 238
+			"INE2" : 
+			{
+				"panelColor" : "#CCC1D9",
+				"panel" : 
+				{
+					"pathVisible" : false,
+					"isOpen" : "true",
+					"position" : 
+					{
+						"X" : 513,
+						"Y" : 238
 					}
 				}
 			},
-			"INE3": {
-				"panelColor": "#B8CCE4",
-				"panel": {
-					"pathVisible": false,
-					"isOpen": "true",
-					"position": {
-						"X": 519,
-						"Y": 455
+			"INE3" : 
+			{
+				"panelColor" : "#B8CCE4",
+				"panel" : 
+				{
+					"pathVisible" : false,
+					"isOpen" : "true",
+					"position" : 
+					{
+						"X" : 519,
+						"Y" : 455
 					}
 				}
 			},
-			"Module": {
-				"panelColor": "#fff",
-				"panel": {
-					"pathVisible": false,
-					"isOpen": "true",
-					"position": {
-						"X": 834,
-						"Y": 213
+			"Module" : 
+			{
+				"panelColor" : "#fff",
+				"panel" : 
+				{
+					"pathVisible" : false,
+					"isOpen" : "true",
+					"position" : 
+					{
+						"X" : 834,
+						"Y" : 213
 					}
 				}
 			},
-			"Element": {
-				"panelColor": "#CCC1D9",
-				"panel": {
-					"pathVisible": false,
-					"isOpen": "true",
-					"position": {
-						"X": 1074,
-						"Y": 273
+			"Element" : 
+			{
+				"panelColor" : "#CCC1D9",
+				"panel" : 
+				{
+					"pathVisible" : false,
+					"isOpen" : "true",
+					"position" : 
+					{
+						"X" : 1074,
+						"Y" : 273
 					}
 				}
 			},
-			"Etudiant": {
-				"panelColor": "#BFBFBF",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 225,
-						"Y": 187
+			"Etudiant" : 
+			{
+				"panelColor" : "#BFBFBF",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 225,
+						"Y" : 187
+					}
+				}
+			},
+			"Annee" : 
+			{
+				"panelColor" : "#C3D69B",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 25,
+						"Y" : 542
 					}
 				}
 			}
 		},
-		"model": {
-			"scriptMode": "manual",
-			"workspaceLeft": 0,
-			"workspaceTop": 0
+		"model" : 
+		{
+			"scriptMode" : "manual",
+			"workspaceLeft" : 0,
+			"workspaceTop" : 200
 		}
 	},
-	"dataClasses": [
+	"dataClasses" : 
+	[
 		{
-			"name": "Element",
-			"className": "Element",
-			"collectionName": "ElementCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Annee",
+			"className" : "Annee",
+			"collectionName" : "AnneeCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "NomElement",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "etudiant",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Etudiant",
+					"path" : "Etudiant"
 				},
 				{
-					"name": "NoteElement",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
+					"name" : "AnneeScolaire",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				}
+			],
+			"key" : 
+			[
 				{
-					"name": "module",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Module",
-					"path": "Module"
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "Etudiant",
-			"className": "Etudiant",
-			"collectionName": "EtudiantCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Element",
+			"className" : "Element",
+			"collectionName" : "ElementCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "Nom",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "NomElement",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "Prenom",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "NoteElement",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
 				},
 				{
-					"name": "Age",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
+					"name" : "module",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Module",
+					"path" : "Module"
+				}
+			],
+			"key" : 
+			[
 				{
-					"name": "AnneeIntegration",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "NiveauCourant",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "INE1",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "INE1",
-					"path": "INE1"
-				},
-				{
-					"name": "INE2",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "INE2",
-					"path": "INE2"
-				},
-				{
-					"name": "INE3",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "INE3",
-					"path": "INE3"
-				},
-				{
-					"name": "AnneeScolaire",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "INE1",
-			"className": "INE1",
-			"collectionName": "INE1Collection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Etudiant",
+			"className" : "Etudiant",
+			"collectionName" : "EtudiantCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "modules",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ModuleCollection",
-					"reversePath": true,
-					"path": "iNE1"
+					"name" : "Nom",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "etudiantCollection",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "EtudiantCollection",
-					"reversePath": true,
-					"path": "INE1"
+					"name" : "Prenom",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "Age",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "AnneeIntegration",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "NiveauCourant",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "INE1",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "INE1",
+					"path" : "INE1"
+				},
+				{
+					"name" : "INE2",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "INE2",
+					"path" : "INE2"
+				},
+				{
+					"name" : "INE3",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "INE3",
+					"path" : "INE3"
+				},
+				{
+					"name" : "Annees",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "AnneeCollection",
+					"reversePath" : true,
+					"path" : "etudiant"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "INE2",
-			"className": "INE2",
-			"collectionName": "INE2Collection",
-			"scope": "public",
-			"attributes": [
+			"name" : "INE1",
+			"className" : "INE1",
+			"collectionName" : "INE1Collection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "modules",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ModuleCollection",
-					"reversePath": true,
-					"path": "iNE2"
+					"name" : "modules",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ModuleCollection",
+					"reversePath" : true,
+					"path" : "iNE1"
 				},
 				{
-					"name": "etudiantCollection",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "EtudiantCollection",
-					"reversePath": true,
-					"path": "INE2"
+					"name" : "etudiantCollection",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "EtudiantCollection",
+					"reversePath" : true,
+					"path" : "INE1"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "INE3",
-			"className": "INE3",
-			"collectionName": "INE3Collection",
-			"scope": "public",
-			"attributes": [
+			"name" : "INE2",
+			"className" : "INE2",
+			"collectionName" : "INE2Collection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "modules",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ModuleCollection",
-					"reversePath": true,
-					"path": "iNE3"
+					"name" : "modules",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ModuleCollection",
+					"reversePath" : true,
+					"path" : "iNE2"
 				},
 				{
-					"name": "etudiantCollection",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "EtudiantCollection",
-					"reversePath": true,
-					"path": "INE3"
+					"name" : "etudiantCollection",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "EtudiantCollection",
+					"reversePath" : true,
+					"path" : "INE2"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "Module",
-			"className": "Module",
-			"collectionName": "ModuleCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "INE3",
+			"className" : "INE3",
+			"collectionName" : "INE3Collection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"indexKind": "btree",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "NomModule",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "modules",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ModuleCollection",
+					"reversePath" : true,
+					"path" : "iNE3"
 				},
 				{
-					"name": "NoteModule",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
+					"name" : "etudiantCollection",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "EtudiantCollection",
+					"reversePath" : true,
+					"path" : "INE3"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "Module",
+			"className" : "Module",
+			"collectionName" : "ModuleCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "iNE1",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "INE1",
-					"path": "INE1"
+					"name" : "NomModule",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "iNE2",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "INE2",
-					"path": "INE2"
+					"name" : "NoteModule",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
 				},
 				{
-					"name": "iNE3",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "INE3",
-					"path": "INE3"
+					"name" : "iNE1",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "INE1",
+					"path" : "INE1"
 				},
 				{
-					"name": "Elements",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ElementCollection",
-					"reversePath": true,
-					"path": "module"
+					"name" : "iNE2",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "INE2",
+					"path" : "INE2"
+				},
+				{
+					"name" : "iNE3",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "INE3",
+					"path" : "INE3"
+				},
+				{
+					"name" : "Elements",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ElementCollection",
+					"reversePath" : true,
+					"path" : "module"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		}
-	],
-	"type": []
+	]
 }
